@@ -1,0 +1,16 @@
+Cython==3.0.11
+cython_bbox==0.1.5
+joblib==1.4.2
+matplotlib==3.9.2
+matplotlib-inline==0.1.7
+numpy==1.26.4
+onnx==1.16.2
+onnxruntime-gpu==1.19.0
+opencv-python==4.10.0.84
+opencv-python-headless==4.10.0.84
+python-dateutil==2.9.0.post0
+python-dotenv==1.0.1
+scikit-learn==1.5.1
+scipy==1.14.1
+tqdm==4.66.5
+lapx==0.5.9.post1
