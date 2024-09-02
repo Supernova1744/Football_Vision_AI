@@ -41,11 +41,11 @@ Tracker used [BoTSort](https://github.com/NirAharon/BoT-SORT/)
 
 1. Clone the repository:
    ```bash
-   git clone  https://github.com/Supernova1744/Football_AI.git
+   git clone  https://github.com/Supernova1744/Football_Vision_AI.git
    ```
 2. Navigate to the project directory:
    ```bash
-   cd Football_AI
+   cd Football_Vision_AI
    ```
 3. Install the required dependencies:
    ```bash
@@ -63,9 +63,10 @@ Tracker used [BoTSort](https://github.com/NirAharon/BoT-SORT/)
 
 ### Demo Video
 
-Check out a demo video of our system in action! Place your video oath in the `--videos` flag for the main script to visualize the analysis.
+Check out a demo video of our system in action! Place your video oath in the `--video` flag for the main script to visualize the analysis.
 
-![Demo Video](videos/demo_video.mp4)
+[Watch Demo Video](videos/demo_video.mp4)
+
 
 ## 💬 Contact
 
