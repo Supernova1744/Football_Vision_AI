@@ -1,1 +1,0 @@
-from .basemodel import BaseONNXModel
