@@ -44,7 +44,7 @@ def main():
         ball_detections, online_players, online_targets, player_with_ball, view_transformer = MainPipeline(frame)
         ball_part, ball_points = get_ball_part(frame.frame_image.copy(), MainPipeline.BALL_PATHS[-1], 70, 70)
         pitch = PitchDrawer.pitch_processing(ball_detections, online_players, online_targets, view_transformer)
-        frame_image = FrameDrawer.draw_on_frame(frame, ball_detections, online_players, ball_points, player_with_ball)
+        frame_image = FrameDrawer.draw_on_frame(frame, ball_detections, online_players, online_targets, ball_points, player_with_ball)
         
         video_writer.write(frame_image, pitch, ball_part)
 

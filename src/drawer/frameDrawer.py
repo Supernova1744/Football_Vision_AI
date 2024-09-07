@@ -126,8 +126,9 @@ class frameDrawer:
         cv2.putText(image, text, (x, y), font, font_scale, text_color, font_thickness, cv2.LINE_AA)
         return image
 
-    def draw_on_frame(self, frame: Frame, ball_detections, online_players, ball_points, player_with_ball):
+    def draw_on_frame(self, frame: Frame, ball_detections, online_players, online_targets, ball_points, player_with_ball):
         frame_image = self.draw_triangle(frame.frame_image, ball_detections[:, :4], ball_detections[:, 5], ball_detections[:, 5])
         frame_image = self.draw_ellipse(frame_image, online_players[:, :4], online_players[:, 4], online_players[:, 5])
+        frame_image = self.draw_ellipse(frame_image, online_targets[:, :4], online_targets[:, 4], online_targets[:, 5])
         frame_image = self.draw_rectangle(frame_image, ball_points, player_with_ball)
         return frame_image

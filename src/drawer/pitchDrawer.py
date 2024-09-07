@@ -226,18 +226,14 @@ class pitchDrawer:
             # Get the region of interest from the background image
             roi = pitch[y-h:y+h, x-w:x+w]
             
-            try:
             # Blend the overlay image and the region of interest
-                blended = (1.0 - alpha_mask[..., np.newaxis]) * roi + alpha_mask[..., np.newaxis] * overlay_rgb
-            except:
-                import pdb
-                pdb.set_trace()
+            blended = (1.0 - alpha_mask[..., np.newaxis]) * roi + alpha_mask[..., np.newaxis] * overlay_rgb
             # Place the blended region back into the background image
             pitch[y-h:y+h, x-w:x+w] = blended
             
             cv2.circle(
                 img=pitch,
-                center=scaled_point,
+                center=(x, y),
                 radius=radius,
                 color=edge_color[::-1],
                 thickness=thickness
@@ -302,6 +298,7 @@ class pitchDrawer:
             overlay_rgb = player[:, :, :3]
             
             x,y = scaled_point[0], scaled_point[1]
+            
             x = np.clip(x, 0+w, pitch.shape[1]-w)
             y = np.clip(y, 0+h, pitch.shape[0]-h)
             # Get the region of interest from the background image
@@ -315,7 +312,7 @@ class pitchDrawer:
             
             cv2.circle(
                 img=pitch,
-                center=scaled_point,
+                center=(x, y),
                 radius=radius,
                 color=face_color[::-1],
                 thickness=thickness
