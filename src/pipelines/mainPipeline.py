@@ -31,8 +31,8 @@ class mainPipeline:
             future1 = executor.submit(self.PosePipeline, frame, self.vertices)
             future2 = executor.submit(self.DetectionTrackingPipeline, frame)
             view_transformer = future1.result()
-            ball_detections, online_players, online_targets = future2.result()
-        return ball_detections, online_players, online_targets, view_transformer
+            ball_detections, online_players, online_targets, player_with_ball = future2.result()
+        return ball_detections, online_players, online_targets, player_with_ball, view_transformer
 
     @property
     def BALL_PATHS(self):
