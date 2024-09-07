@@ -1,7 +1,5 @@
 import numpy as np
 from collections import deque
-
-# import matching
 from . import matching
 from .gmc import GMC
 from .basetrack import BaseTrack, TrackState
