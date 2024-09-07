@@ -5,7 +5,7 @@ matplotlib==3.9.2
 matplotlib-inline==0.1.7
 numpy==1.26.4
 onnx==1.16.2
-onnxruntime-gpu==1.19.0
+onnxruntime-gpu==1.18.1
 opencv-python==4.10.0.84
 opencv-python-headless==4.10.0.84
 python-dateutil==2.9.0.post0
